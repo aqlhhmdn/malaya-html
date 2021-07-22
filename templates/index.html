@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+{% block title %}Malaya{% endblock %}
+
+{% block content %}
+<div class="content-wrapper">
+	<br>
+	<br>
+	<div class="container">
+		<div class="row align-items-center justify-content-center">
+			<div class="col-md-6 justify-content-center">
+				<div class="card">
+					<div class="card-header">
+						<h3>Word To Number</h3>
+					</div>
+					<form action="{{ url_for('word2num') }}" method="post">
+						<div class="card-body">
+							<div class="input-group form-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="bi bi-person-circle"></i></span>
+								</div>
+								<input type="text" class="form-control" placeholder="Word" name="w2n">
+							</div>
+							<textarea name="display" rows="5" disabled>{{val_w2n}}</textarea>
+							<div class="form-group">
+								<input type="submit" value="Enter" class="btn-enter">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+	
+			<div class="col-md-6 justify-content-center">
+				<div class="card">
+					<div class="card-header">
+						<h3>Number To Word</h3>
+					</div>
+					<form action="{{ url_for('num2word') }}" method="post">
+						<div class="card-body">
+							<div class="input-group form-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="bi bi-person-circle"></i></span>
+								</div>
+								<input type="text" class="form-control" placeholder="Number" name="n2w">
+							</div>
+							<textarea name="display" rows="5" disabled>{{val_n2w}}</textarea>
+							<div class="form-group">
+								<input type="submit" value="Enter" class="btn-enter">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="row align-items-center justify-content-center">
+			<div class="col-md-6 justify-content-center">
+				<div class="card">
+					<div class="card-header">
+						<h3>Normalizer</h3>
+					</div>
+					<form action="{{ url_for('normalize') }}" method="post">
+						<div class="card-body">
+							<div class="input-group form-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="bi bi-person-circle"></i></span>
+								</div>
+								<input type="text" class="form-control" placeholder="Sentence" name="nrml">
+							</div>
+							<textarea name="display" rows="5" wrap="hard" disabled>{{val_nrml}}</textarea>
+							<div class="form-group">
+								<input type="submit" value="Enter" class="btn-enter">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+	
+	
+			<div class="col-md-6 justify-content-center">
+				<div class="card">
+					<div class="card-header">
+						<h3>Not Suitable For Work</h3>
+					</div>
+					<form action="{{ url_for('nsfw') }}" method="post">
+						<div class="card-body">
+							<div class="input-group form-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="bi bi-person-circle"></i></span>
+								</div>
+								<input type="text" class="form-control" placeholder="Sentence" name="nsfw">
+							</div>
+							<textarea name="display" rows="5" disabled>{{val_nsfw}}</textarea>
+							<div class="form-group">
+								<input type="submit" value="Enter" class="btn-enter">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="row align-items-center justify-content-center">	
+			<div class="col-md-6 justify-content-center">
+				<div class="card">
+					<div class="card-header">
+						<h3>Tokenizer</h3>
+					</div>
+					<form action="{{ url_for('token') }}" method="post">
+						<div class="card-body">
+							<div class="input-group form-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="bi bi-person-circle"></i></span>
+								</div>
+								<input type="text" class="form-control" placeholder="Sentence" name="tkn">
+							</div>
+							<textarea name="display" rows="5" disabled>{{val_tkn}}</textarea>
+							<div class="form-group">
+								<input type="submit" value="Enter" class="btn-enter">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+	
+			<div class="col-md-6 justify-content-center">
+				<div class="card">
+					<div class="card-header">
+						<h3>Spelling</h3>
+					</div>
+					<form action="{{ url_for('spell') }}" method="post">
+						<div class="card-body">
+							<div class="input-group form-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="bi bi-person-circle"></i></span>
+								</div>
+								<input type="text" class="form-control" placeholder="Sentence" name="spll">
+							</div>
+							<textarea name="display" rows="5" disabled>{{val_spll}}</textarea>
+							<div class="form-group">
+								<input type="submit" value="Enter" class="btn-enter">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+	
+		</div>
+	
+	</div>
+	<br>
+	<br>
+</div>
+
+
+{% endblock %}
